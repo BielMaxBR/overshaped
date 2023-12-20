@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://63s3lfwqafmy"]
+
+[ext_resource type="Script" path="res://scripts/divisora.gd" id="1_q056u"]
+[ext_resource type="Texture2D" uid="uid://chbp1shy61j5t" path="res://sprites/mesa.png" id="1_s7qjs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrmvk"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fc3e0"]
+
+[node name="Divisora" type="StaticBody2D" groups=["Mesa"]]
+script = ExtResource("1_q056u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.819608, 0.576471, 1)
+texture = ExtResource("1_s7qjs")
+region_rect = Rect2(32, 32, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lrmvk")
+
+[node name="Coletor" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coletor"]
+shape = SubResource("CircleShape2D_fc3e0")
+
+[node name="Saidas" type="Node2D" parent="."]
+
+[node name="SaidaL" type="Marker2D" parent="Saidas"]
+position = Vector2(-64, 0)
+
+[node name="SaidaD" type="Marker2D" parent="Saidas"]
+position = Vector2(64, 0)
+
+[connection signal="body_entered" from="Coletor" to="." method="_on_coletor_body_entered"]
+[connection signal="body_exited" from="Coletor" to="." method="_on_coletor_body_exited"]
