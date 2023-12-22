@@ -23,10 +23,10 @@ func _physics_process(delta):
 			have_item.global_position = ($Hand.global_position + OFFSET).snapped(TILE_SIZE) - OFFSET
 			have_item.on_ground = true
 func _on_pick_body_entered(body):
-	if body.is_in_group("Item") and not grabbing:
+	if (body.is_in_group("Item") or body.is_in_group("Pigment")) and not grabbing:
 		have_item = body
 
 
 func _on_pick_body_exited(body):
-	if body.is_in_group("Item") and not grabbing:
+	if (body.is_in_group("Item") or body.is_in_group("Pigment")) and not grabbing:
 		have_item = null
