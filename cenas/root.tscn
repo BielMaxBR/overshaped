@@ -1,24 +1,24 @@
 [gd_scene load_steps=13 format=3 uid="uid://d11lpiek6u243"]
 
-[ext_resource type="PackedScene" uid="uid://dviicxgf0jx0u" path="res://player.tscn" id="1_3t71s"]
-[ext_resource type="PackedScene" uid="uid://63s3lfwqafmy" path="res://mesas/divisora.tscn" id="1_hc85j"]
-[ext_resource type="Script" path="res://root.gd" id="1_v4iie"]
-[ext_resource type="Texture2D" uid="uid://did2ump4qr0e4" path="res://sprites/chao.png" id="2_hdmv1"]
-[ext_resource type="PackedScene" uid="uid://d4bs66ud8r3k5" path="res://mesas/rotoraO.tscn" id="3_if6en"]
-[ext_resource type="PackedScene" uid="uid://dfyc4ny4ha34w" path="res://item.tscn" id="4_a3bir"]
-[ext_resource type="PackedScene" uid="uid://mkh6o3p13a5k" path="res://mesas/rotoraA.tscn" id="4_gev2h"]
-[ext_resource type="PackedScene" uid="uid://bkl65aphgyf0l" path="res://mesas/fusora.tscn" id="5_b1t4l"]
-[ext_resource type="PackedScene" uid="uid://c0fuw722vs1bg" path="res://Pigment.tscn" id="9_emt1k"]
+[ext_resource type="Script" path="res://scripts/root.gd" id="1_egwqp"]
+[ext_resource type="PackedScene" uid="uid://63s3lfwqafmy" path="res://mesas/divisora.tscn" id="2_1nvxj"]
+[ext_resource type="PackedScene" uid="uid://d4bs66ud8r3k5" path="res://mesas/rotoraO.tscn" id="3_4c82f"]
+[ext_resource type="PackedScene" uid="uid://mkh6o3p13a5k" path="res://mesas/rotoraA.tscn" id="4_dknxl"]
+[ext_resource type="PackedScene" uid="uid://bkl65aphgyf0l" path="res://mesas/fusora.tscn" id="5_8dwyg"]
+[ext_resource type="Texture2D" uid="uid://did2ump4qr0e4" path="res://sprites/chao.png" id="6_s5ln2"]
+[ext_resource type="PackedScene" uid="uid://dviicxgf0jx0u" path="res://objetos/player.tscn" id="7_24iy0"]
+[ext_resource type="PackedScene" uid="uid://dfyc4ny4ha34w" path="res://objetos/item.tscn" id="8_l5n5g"]
+[ext_resource type="PackedScene" uid="uid://c0fuw722vs1bg" path="res://objetos/Pigment.tscn" id="9_tl3n3"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5x2n0"]
 resource_name = "blocos"
-scenes/1/scene = ExtResource("1_hc85j")
-scenes/2/scene = ExtResource("3_if6en")
-scenes/3/scene = ExtResource("4_gev2h")
-scenes/4/scene = ExtResource("5_b1t4l")
+scenes/1/scene = ExtResource("2_1nvxj")
+scenes/2/scene = ExtResource("3_4c82f")
+scenes/3/scene = ExtResource("4_dknxl")
+scenes/4/scene = ExtResource("5_8dwyg")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bu0wf"]
-texture = ExtResource("2_hdmv1")
+texture = ExtResource("6_s5ln2")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -43,7 +43,7 @@ sources/1 = SubResource("TileSetAtlasSource_bu0wf")
 
 [node name="Root" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_v4iie")
+script = ExtResource("1_egwqp")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -56,10 +56,10 @@ layer_1/y_sort_enabled = true
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(327689, 0, 65536, 327683, 0, 131072, 196611, 0, 196608, 262156, 0, 262144)
 
-[node name="player" parent="." instance=ExtResource("1_3t71s")]
+[node name="player" parent="." instance=ExtResource("7_24iy0")]
 position = Vector2(480, 288)
 
-[node name="Item" parent="." instance=ExtResource("4_a3bir")]
+[node name="Item" parent="." instance=ExtResource("8_l5n5g")]
 position = Vector2(544, 352)
 corners = [{
 "color": Color(1, 1, 1, 1),
@@ -75,5 +75,5 @@ corners = [{
 "shape": 0
 }]
 
-[node name="Pigment" parent="." instance=ExtResource("9_emt1k")]
+[node name="Pigment" parent="." instance=ExtResource("9_tl3n3")]
 position = Vector2(480, 480)

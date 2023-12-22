@@ -1,6 +1,6 @@
 extends Node
 
-var preloaded_item = preload("res://item.tscn")
+var preloaded_item = preload("res://objetos/item.tscn")
 
 func create_item(corners: Dictionary, parent: Node2D, position: Vector2):
 	var new_item: Item = preloaded_item.instantiate()
