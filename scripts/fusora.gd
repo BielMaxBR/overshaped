@@ -11,10 +11,6 @@ func pintar():
 			is_possible = false
 			
 	if not is_possible:
-		item_a.global_position = $Saidas/Saida.global_position
-		item_b.global_position = $Saidas/Saida.global_position
-		item_a = null
-		item_b = null
 		return
 	# pega os cantos não vazios
 	var corners = {}

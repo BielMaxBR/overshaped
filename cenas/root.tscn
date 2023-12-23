@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://d11lpiek6u243"]
+[gd_scene load_steps=14 format=3 uid="uid://d11lpiek6u243"]
 
 [ext_resource type="Script" path="res://scripts/root.gd" id="1_egwqp"]
 [ext_resource type="PackedScene" uid="uid://63s3lfwqafmy" path="res://mesas/divisora.tscn" id="2_1nvxj"]
 [ext_resource type="PackedScene" uid="uid://d4bs66ud8r3k5" path="res://mesas/rotoraO.tscn" id="3_4c82f"]
 [ext_resource type="PackedScene" uid="uid://mkh6o3p13a5k" path="res://mesas/rotoraA.tscn" id="4_dknxl"]
 [ext_resource type="PackedScene" uid="uid://bkl65aphgyf0l" path="res://mesas/fusora.tscn" id="5_8dwyg"]
+[ext_resource type="PackedScene" uid="uid://p3lk4se6k4p" path="res://mesas/pintora.tscn" id="6_hdypj"]
 [ext_resource type="Texture2D" uid="uid://did2ump4qr0e4" path="res://sprites/chao.png" id="6_s5ln2"]
 [ext_resource type="PackedScene" uid="uid://dviicxgf0jx0u" path="res://objetos/player.tscn" id="7_24iy0"]
 [ext_resource type="PackedScene" uid="uid://dfyc4ny4ha34w" path="res://objetos/item.tscn" id="8_l5n5g"]
@@ -16,6 +17,7 @@ scenes/1/scene = ExtResource("2_1nvxj")
 scenes/2/scene = ExtResource("3_4c82f")
 scenes/3/scene = ExtResource("4_dknxl")
 scenes/4/scene = ExtResource("5_8dwyg")
+scenes/5/scene = ExtResource("6_hdypj")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bu0wf"]
 texture = ExtResource("6_s5ln2")
@@ -54,7 +56,7 @@ layer_0/tile_data = PackedInt32Array(327688, 1, 0, 0, 65537, 0, 65536, 65537, 0,
 layer_1/name = "coisas"
 layer_1/y_sort_enabled = true
 layer_1/z_index = 1
-layer_1/tile_data = PackedInt32Array(327689, 0, 65536, 327683, 0, 131072, 196611, 0, 196608, 262156, 0, 262144)
+layer_1/tile_data = PackedInt32Array(327689, 0, 65536, 327683, 0, 131072, 196611, 0, 196608, 262156, 0, 262144, 196620, 0, 327680)
 
 [node name="player" parent="." instance=ExtResource("7_24iy0")]
 position = Vector2(480, 288)
@@ -75,5 +77,29 @@ corners = [{
 "shape": 0
 }]
 
+[node name="Item2" parent="." instance=ExtResource("8_l5n5g")]
+position = Vector2(736, 480)
+corners = [{
+"color": Color(1, 1, 1, 1),
+"shape": 1
+}, {
+"color": Color(1, 1, 1, 1),
+"shape": 1
+}, {
+"color": Color(1, 1, 1, 1),
+"shape": 1
+}, {
+"color": Color(1, 1, 1, 1),
+"shape": 2
+}]
+
 [node name="Pigment" parent="." instance=ExtResource("9_tl3n3")]
 position = Vector2(480, 480)
+
+[node name="Pigment2" parent="." instance=ExtResource("9_tl3n3")]
+position = Vector2(544, 480)
+color = Color(0, 1, 0, 1)
+
+[node name="Pigment3" parent="." instance=ExtResource("9_tl3n3")]
+position = Vector2(416, 544)
+color = Color(1, 0, 0, 1)

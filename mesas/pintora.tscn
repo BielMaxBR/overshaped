@@ -12,6 +12,7 @@ size = Vector2(128, 64)
 script = ExtResource("1_cvuv6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.203922, 1, 1)
 position = Vector2(32, 0)
 texture = ExtResource("2_cgmba")
 region_rect = Rect2(32, 32, 64, 64)
@@ -21,16 +22,16 @@ position = Vector2(32, 0)
 shape = SubResource("RectangleShape2D_lrmvk")
 
 [node name="ColetorA" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 6
+collision_layer = 10
+collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ColetorA"]
 shape = SubResource("CircleShape2D_fc3e0")
 
 [node name="ColetorB" type="Area2D" parent="."]
 position = Vector2(64, 0)
-collision_layer = 2
-collision_mask = 6
+collision_layer = 10
+collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ColetorB"]
 shape = SubResource("CircleShape2D_fc3e0")
