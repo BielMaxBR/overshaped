@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_dycmc"]
 radius = 32.0
 
-[node name="Pigment" type="CharacterBody2D"]
+[node name="Pigment" type="CharacterBody2D" groups=["Pigment"]]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("1_myxk4")
