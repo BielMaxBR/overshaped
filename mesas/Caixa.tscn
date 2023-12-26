@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfej2edm2xmbl"]
+
+[ext_resource type="Script" path="res://scripts/Caixa.gd" id="1_h23fc"]
+[ext_resource type="Texture2D" uid="uid://ck3b6oqrdmdmd" path="res://sprites/caixa.png" id="1_lgh5e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rv2nq"]
+size = Vector2(64, 64)
+
+[node name="Caixa" type="StaticBody2D"]
+script = ExtResource("1_h23fc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lgh5e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rv2nq")

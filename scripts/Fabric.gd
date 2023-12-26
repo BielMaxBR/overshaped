@@ -1,6 +1,7 @@
 extends Node
 
 var preloaded_item = preload("res://objetos/item.tscn")
+var preloaded_pigment = preload("res://objetos/Pigment.tscn")
 
 func create_item(corners: Dictionary, parent: Node2D, position: Vector2):
 	var new_item: Item = preloaded_item.instantiate()
@@ -18,4 +19,10 @@ func create_item(corners: Dictionary, parent: Node2D, position: Vector2):
 		parent.add_child(new_item)
 	else:
 		new_item.queue_free()
+
+func create_pigment(color: Color, parent: Node2D, position: Vector2) -> void:
+	var pigment = preloaded_pigment.instantiate()
 	
+	pigment.color = color
+	pigment.global_position = position
+	parent.add_child(pigment)

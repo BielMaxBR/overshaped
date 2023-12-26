@@ -3,7 +3,7 @@ extends StaticBody2D
 var item_a: Item
 var item_b: Item
 
-func pintar():
+func fundir():
 	# checar se a fusão é possivel
 	var is_possible = true
 	for i in range(0,4):
@@ -30,7 +30,7 @@ func pintar():
 func _process(delta):
 	if item_a and item_b:
 		if item_a.on_ground and item_b.on_ground:
-			pintar()
+			fundir()
 
 
 func _on_coletor_a_body_entered(body):

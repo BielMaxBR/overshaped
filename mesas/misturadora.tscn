@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://colkbe1ef66kg"]
+
+[ext_resource type="Script" path="res://scripts/misturadora.gd" id="1_fpyhr"]
+[ext_resource type="Texture2D" uid="uid://cgow8bi5lotmt" path="res://sprites/fusora.png" id="2_x7621"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrmvk"]
+size = Vector2(128, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fc3e0"]
+
+[node name="Misturadora" type="StaticBody2D" groups=["Mesa"]]
+script = ExtResource("1_fpyhr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.337255, 1, 1, 1)
+position = Vector2(32, 0)
+texture = ExtResource("2_x7621")
+region_rect = Rect2(32, 32, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, 0)
+shape = SubResource("RectangleShape2D_lrmvk")
+
+[node name="ColetorA" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColetorA"]
+shape = SubResource("CircleShape2D_fc3e0")
+
+[node name="ColetorB" type="Area2D" parent="."]
+position = Vector2(64, 0)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColetorB"]
+shape = SubResource("CircleShape2D_fc3e0")
+
+[node name="Saidas" type="Node2D" parent="."]
+
+[node name="Saida" type="Marker2D" parent="Saidas"]
+position = Vector2(128, 0)
+
+[connection signal="body_entered" from="ColetorA" to="." method="_on_coletor_a_body_entered"]
+[connection signal="body_exited" from="ColetorA" to="." method="_on_coletor_a_body_exited"]
+[connection signal="body_entered" from="ColetorB" to="." method="_on_coletor_b_body_entered"]
+[connection signal="body_exited" from="ColetorB" to="." method="_on_coletor_b_body_exited"]
