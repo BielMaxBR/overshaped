@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyb0727n3c3lj"]
+
+[ext_resource type="Script" path="res://scripts/Global.gd" id="1_a7oqi"]
+[ext_resource type="PackedScene" uid="uid://dfyc4ny4ha34w" path="res://objetos/item.tscn" id="2_ucu4b"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_a7oqi")
+
+[node name="cont" type="SubViewportContainer" parent="."]
+offset_right = 512.0
+offset_bottom = 512.0
+
+[node name="vew" type="SubViewport" parent="cont"]
+handle_input_locally = false
+size = Vector2i(256, 256)
+render_target_update_mode = 4
+
+[node name="Camera2D" type="Camera2D" parent="cont/vew"]
+
+[node name="Items" type="Node2D" parent="cont/vew"]
+
+[node name="Item1" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corners = [{
+"color": Color(0, 1, 1, 1),
+"shape": 4
+}, {
+"color": Color(1, 1, 1, 1),
+"shape": 4
+}, {
+"color": Color(1, 1, 1, 1),
+"shape": 4
+}, {
+"color": Color(1, 1, 1, 1),
+"shape": 4
+}]
+corner_text = "CwCwCwCw"
+
+[node name="Item2" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corner_text = "CwSwCwSw"
+
+[node name="Item3" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corner_text = "CwCwNwCw"
+
+[node name="Item4" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corner_text = "XwXwSwSw"
+
+[node name="Item5" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corner_text = "SrXgSbSw"
+
+[node name="Item6" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corners = [{
+"color": Color(1, 1, 1, 1),
+"shape": 4
+}, {
+"color": Color(1, 1, 1, 1),
+"shape": 4
+}, {
+"color": Color(1, 1, 1, 1),
+"shape": 4
+}, {
+"color": Color(1, 1, 1, 1),
+"shape": 4
+}, null]
+corner_text = "XwCcCcXw"
+
+[node name="Item7" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corner_text = "WwWyWwWy"
+
+[node name="Item8" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corner_text = "WwNwWwNw"
+
+[node name="Item9" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corner_text = "CbSrXwXg"
+
+[node name="Item10" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]
+visible = false
+corner_text = "CwSyXmWg"

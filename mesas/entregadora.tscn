@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://fvcxsakkljpk"]
+
+[ext_resource type="Script" path="res://scripts/entregadora.gd" id="1_rvn2o"]
+[ext_resource type="Texture2D" uid="uid://x8u3bp7gcfh3" path="res://sprites/ENTREGA.png" id="2_lo4ix"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrmvk"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fc3e0"]
+
+[node name="Entregadora" type="StaticBody2D" groups=["Mesa"]]
+script = ExtResource("1_rvn2o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lo4ix")
+region_rect = Rect2(32, 32, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lrmvk")
+
+[node name="Coletor" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coletor"]
+shape = SubResource("CircleShape2D_fc3e0")
+
+[connection signal="body_entered" from="Coletor" to="." method="_on_coletor_body_entered"]
+[connection signal="body_exited" from="Coletor" to="." method="_on_coletor_body_exited"]

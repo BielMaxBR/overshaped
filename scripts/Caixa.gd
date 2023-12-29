@@ -8,6 +8,8 @@ func summon_item(parent: Node2D):
 	parent.add_child(instance)
 	for property in object_properties.keys():
 		instance.set(property, object_properties[property])
+		if instance is Item:
+			instance.update_corners()
 	return instance
 
 func _process(delta):

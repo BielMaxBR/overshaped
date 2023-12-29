@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 450.0
 const TILE_SIZE = Vector2(64,64)
 const OFFSET = TILE_SIZE/2
 
@@ -39,10 +39,9 @@ func _on_pick_body_entered(body):
 		if (body.is_in_group("Item") or body.is_in_group("Pigment")):
 			have_item = body
 
-
 func _on_pick_body_exited(body):
+	if body is Box:
+		have_box = null
 	if not grabbing:
-		if body is Box:
-			have_box = null
 		if (body.is_in_group("Item") or body.is_in_group("Pigment")):
 			have_item = null
