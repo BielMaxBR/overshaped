@@ -15,8 +15,6 @@ handle_input_locally = false
 size = Vector2i(256, 256)
 render_target_update_mode = 4
 
-[node name="Camera2D" type="Camera2D" parent="cont/vew"]
-
 [node name="Items" type="Node2D" parent="cont/vew"]
 
 [node name="Item1" parent="cont/vew/Items" instance=ExtResource("2_ucu4b")]

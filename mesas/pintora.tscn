@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://p3lk4se6k4p"]
 
 [ext_resource type="Script" path="res://scripts/pintora.gd" id="1_cvuv6"]
-[ext_resource type="Texture2D" uid="uid://cgow8bi5lotmt" path="res://sprites/fusora.png" id="2_cgmba"]
+[ext_resource type="Texture2D" uid="uid://d2la1v5or612s" path="res://sprites/pintora.png" id="2_77nv7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrmvk"]
 size = Vector2(128, 64)
@@ -12,9 +12,8 @@ size = Vector2(128, 64)
 script = ExtResource("1_cvuv6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.203922, 1, 1)
 position = Vector2(32, 0)
-texture = ExtResource("2_cgmba")
+texture = ExtResource("2_77nv7")
 region_rect = Rect2(32, 32, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

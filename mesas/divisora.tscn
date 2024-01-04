@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://63s3lfwqafmy"]
 
 [ext_resource type="Script" path="res://scripts/divisora.gd" id="1_q056u"]
-[ext_resource type="Texture2D" uid="uid://chbp1shy61j5t" path="res://sprites/mesa.png" id="1_s7qjs"]
+[ext_resource type="Texture2D" uid="uid://bo2qprsw43dgl" path="res://sprites/divisora.png" id="2_d5qiw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrmvk"]
 size = Vector2(64, 64)
@@ -12,7 +12,7 @@ size = Vector2(64, 64)
 script = ExtResource("1_q056u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_s7qjs")
+texture = ExtResource("2_d5qiw")
 region_rect = Rect2(32, 32, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

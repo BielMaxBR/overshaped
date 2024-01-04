@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://colkbe1ef66kg"]
 
 [ext_resource type="Script" path="res://scripts/misturadora.gd" id="1_fpyhr"]
-[ext_resource type="Texture2D" uid="uid://cgow8bi5lotmt" path="res://sprites/fusora.png" id="2_x7621"]
+[ext_resource type="Texture2D" uid="uid://dwwemp7pa6ivm" path="res://sprites/misturadora.png" id="2_5qbuy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrmvk"]
 size = Vector2(128, 64)
@@ -12,9 +12,8 @@ size = Vector2(128, 64)
 script = ExtResource("1_fpyhr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.337255, 1, 1, 1)
 position = Vector2(32, 0)
-texture = ExtResource("2_x7621")
+texture = ExtResource("2_5qbuy")
 region_rect = Rect2(32, 32, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

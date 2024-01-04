@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://mkh6o3p13a5k"]
 
 [ext_resource type="Script" path="res://scripts/rotoraA.gd" id="1_6uvmh"]
-[ext_resource type="Texture2D" uid="uid://chbp1shy61j5t" path="res://sprites/mesa.png" id="2_4h1bl"]
+[ext_resource type="Texture2D" uid="uid://c4bdv8c1rldl4" path="res://sprites/rotoraA.png" id="2_bg3ul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrmvk"]
 size = Vector2(64, 64)
@@ -12,8 +12,7 @@ size = Vector2(64, 64)
 script = ExtResource("1_6uvmh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.819608, 0.137255, 1)
-texture = ExtResource("2_4h1bl")
+texture = ExtResource("2_bg3ul")
 region_rect = Rect2(32, 32, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
